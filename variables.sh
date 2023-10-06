@@ -1,4 +1,5 @@
 #!/bin/bash
 a=100
 b=200
-echo "$a+$b"
+c=$a+$b 
+echo "c"
