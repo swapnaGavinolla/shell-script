@@ -20,7 +20,7 @@ then
    echo "ERROR: run wid root access"
    exit 1
 fi
-cp mango.repo /etc/yum.repos.d/mongo.repo &>>LOGFILE
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>>LOGFILE
 VALIDATE $? "copying repo file"
 
 yum install mongodb-org -y &>>LOGFILE
