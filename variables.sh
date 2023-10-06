@@ -3,5 +3,5 @@ a=100
 b=200 
 echo "$a and $b"
 date=$(date)
-scho "$date"
+echo "$date"
 
