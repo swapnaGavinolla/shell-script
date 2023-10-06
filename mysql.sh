@@ -30,7 +30,7 @@ VALIDATE $? "disabling mysql"
 cp mysql.repo /etc/yum.repos.d/mysql.repo &>>LOGFILE
 VALIDATE $? "copying mysql repo" 
 
-yum install mysql-community-server -y &>>LOGFILE
+yum install mysql-community-server -y
 VALIDATE $? "installing mysql" 
 
 systemctl enable mysqld &>>LOGFILE
