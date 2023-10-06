@@ -4,7 +4,7 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 R="\e[31m"
-G= "\e[32m"
+G="\e[32m"
 N="\e[0m"
 
 VALIDATE(){
