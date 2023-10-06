@@ -49,7 +49,7 @@ cd /app &>>LOGFILE
 npm install &>>LOGFILE
 VALIDATE $? "installing npm"
 
-cp /c/Users/Administrator/devops/repos/shell-script/catalogue.service   /etc/systemd/system/catalogue.service &>>LOGFILE
+cp /home/centos/shell-script/catalogue.service   /etc/systemd/system/catalogue.service &>>LOGFILE
 VALIDATE $? "copying repo"
 
 systemctl daemon-reload &>>LOGFILE
