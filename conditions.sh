@@ -5,11 +5,11 @@ then
     echo "exit and run with root access"
     exit 1
 fi
-yum install mysql -y    
+yum install nginx -y    
 if [$? ne 0]
 then 
-    echo "installation of mysql is error"
+    echo "installation of nginx is error"
     exit 1
 else
-    echo "installation of mysql is success"
+    echo "installation of nginx is success"
 fi        
