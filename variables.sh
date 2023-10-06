@@ -1,5 +1,7 @@
 #!/bin/bash
 a=100
-b=200
-c="$a+$b" 
-echo "$c"
+b=200 
+echo "$a and $b"
+date=$(date)
+scho "$date"
+
