@@ -30,9 +30,6 @@ VALIDATE $? "downloading setup"
 yum install nodejs -y &>>LOGFILE
 VALIDATE $? "installing nodeJS"
 
-useradd roboshop
-VALIDATE $? "adding user"
-
 mkdir /app &>>LOGFILE
 VALIDATE $? "creating directory"
  
