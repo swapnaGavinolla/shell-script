@@ -1,5 +1,9 @@
 #!/bin/bash
 
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
@@ -17,8 +21,8 @@ then
    exit 1
 fi
 yum install git -y 
-VALIDATE $? "installing git"
+VALIDATE $? "installing git" &>>LOGFILE
 yum install nginx -y
-VALIDATE $? "installing nginx"
+VALIDATE $? "installing nginx" &>>LOGFILE
 yum install postfix -y   
-VALIDATE $? "installing postfix"
+VALIDATE $? "installing postfix" &>>LOGFILE
