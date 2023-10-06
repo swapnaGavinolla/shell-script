@@ -1,6 +1,6 @@
 #!/bin/bash
 USERNAME=$(id -u)
-if ($USERNAME ne 0)
+if ($USERNAME -ne 0)
 then 
     echo "exit and run with root access"
     exit 1
