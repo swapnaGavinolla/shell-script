@@ -24,49 +24,49 @@ then
    exit 1
 fi
 
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash >>&LOGFILE
+curl -sL https://rpm.nodesource.com/setup_lts.x | bash  &>>LOGFILE
 VALIDATE $? "downloading setup"
 
-yum install nodejs -y >>&LOGFILE
+yum install nodejs -y &>>LOGFILE
 VALIDATE $? "installing nodeJS"
 
-useradd roboshop >>&LOGFILE
+useradd roboshop &>>LOGFILE
 VALIDATE $? "adding user"
 
-mkdir /app >>&LOGFILE
+mkdir /app &>>LOGFILE
 VALIDATE $? "creating directory"
  
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
 VALIDATE $? "downloading the application code"
 
-cd /app >>&LOGFILE
+cd /app &>>LOGFILE
 
-unzip /tmp/catalogue.zip >>&LOGFILE
+unzip /tmp/catalogue.zip &>>LOGFILE
 VALIDATE $? "unzipping"
 
-cd /app >>&LOGFILE
+cd /app &>>LOGFILE
 
-npm install >>&LOGFILE
+npm install &>>LOGFILE
 VALIDATE $? "installing npm"
 
-cp /c/Users/Administrator/devops/repos/shell-script/catalogue.service   /etc/systemd/system/catalogue.service >>&LOGFILE
+cp /c/Users/Administrator/devops/repos/shell-script/catalogue.service   /etc/systemd/system/catalogue.service &>>LOGFILE
 VALIDATE $? "copying repo"
 
-systemctl daemon-reload >>&LOGFILE
+systemctl daemon-reload &>>LOGFILE
 VALIDATE $? "demon reloading"
 
-systemctl enable catalogue >>&LOGFILE
+systemctl enable catalogue &>>LOGFILE
 VALIDATE $? "enabling catalogue"
 
-systemctl start catalogue >>&LOGFILE
+systemctl start catalogue &>>LOGFILE
 VALIDATE $? " starting catalogue"
 
 cp /c/Users/Administrator/devops/repos/shell-script/catalogue.service /etc/yum.repos.d/mongo.repo
 VALIDATE $? "copying repo"
 
-yum install mongodb-org-shell -y >>&LOGFILE
+yum install mongodb-org-shell -y &>>LOGFILE
 VALIDATE $? "installing mongo client"
 
-mongo --host 172.31.41.224 </app/schema/catalogue.js >>&LOGFILE
+mongo --host 172.31.41.224 </app/schema/catalogue.js &>>LOGFILE
 VALIDATE $? " loading schema"
 
