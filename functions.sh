@@ -2,7 +2,7 @@
 
 VALIDATE(){
     if[$1 -ne 0]
-    then 
+    then
          echo " $2 installation is .... failure"
          exit 1
     else     
