@@ -1,4 +1,4 @@
 #!/bin/bash
-a=value1
-b=value2
-echo "$a and $b"
+a=100
+b=200
+echo "$a+$b"
