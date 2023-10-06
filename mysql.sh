@@ -24,13 +24,11 @@ then
    exit 1
 fi
 
-yum module disable mysql -y &>>LOGFILE
-VALIDATE $? "disabling mysql" 
 
 cp mysql.repo /etc/yum.repos.d/mysql.repo &>>LOGFILE
 VALIDATE $? "copying mysql repo" 
 
-yum install mysql -y
+yum install mysql-community-server -y -y
 VALIDATE $? "installing mysql" 
 
 systemctl enable mysqld &>>LOGFILE
