@@ -1,6 +1,6 @@
 #!/bin/bash
-a=100
-b=200 
+a=$1
+b=$2 
 c=$((a+b))
 DATE=$(date)
 echo "the sum is $c"
