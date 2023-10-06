@@ -29,9 +29,6 @@ VALIDATE $? "downloading setup"
 
 yum install nodejs -y &>>LOGFILE
 VALIDATE $? "installing nodeJS"
-
-mkdir /app 
-VALIDATE $? "creating directory"
  
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
 VALIDATE $? "downloading the application code"
