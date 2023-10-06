@@ -32,7 +32,7 @@ VALIDATE $? "enabling mongod"
 systemctl start mongod &>>LOGFILE
 VALIDATE $? "starting momgod"
 
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf 
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf >>&>>LOGFILE
 VALIDATE $? "edited conf"
 
 systemctl restart mongod &>>LOGFILE
