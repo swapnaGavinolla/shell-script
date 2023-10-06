@@ -1,2 +1,4 @@
 #!/bin/bash
-echo -e "\e[31m helloo \e[32m world"
+R="\e[31m"
+G= "\e[32m"
+echo -e "$R helloo $G world"
