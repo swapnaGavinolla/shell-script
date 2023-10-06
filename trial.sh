@@ -1,1 +1,1 @@
-helloooo there
+echo "starting d day"
