@@ -61,7 +61,7 @@ VALIDATE $? "enabling catalogue"
 systemctl start catalogue &>>LOGFILE
 VALIDATE $? " starting catalogue"
 
-cp /c/Users/Administrator/devops/repos/shell-script/catalogue.service /etc/yum.repos.d/mongo.repo
+cp /home/centos/shell-script/catalogue.service /etc/yum.repos.d/mongo.repo
 VALIDATE $? "copying repo"
 
 yum install mongodb-org-shell -y &>>LOGFILE
