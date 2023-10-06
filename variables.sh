@@ -13,8 +13,8 @@ DATE=$(date)
 echo "this is done at $DATE"
 
 #3.can get d values from command line
-name1=$1
-name2=$2
+name1=$3
+name2=$4
 echo "given names are $name1 and $name2"
 
 #4.get username n password --prompt d user to enter
