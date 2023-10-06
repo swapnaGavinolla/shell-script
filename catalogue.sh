@@ -30,23 +30,23 @@ VALIDATE $? "downloading setup"
 yum install nodejs -y &>>LOGFILE
 VALIDATE $? "installing nodeJS"
 
-mkdir /app &>>LOGFILE
+mkdir /app 
 VALIDATE $? "creating directory"
  
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
 VALIDATE $? "downloading the application code"
 
-cd /app &>>LOGFILE
+cd /app 
 
 unzip /tmp/catalogue.zip &>>LOGFILE
 VALIDATE $? "unzipping"
 
-cd /app &>>LOGFILE
+cd /app 
 
 npm install &>>LOGFILE
 VALIDATE $? "installing npm"
 
-cp /home/centos/shell-script/catalogue.service   /etc/systemd/system/catalogue.service &>>LOGFILE
+cp /home/centos/shell-script/catalogue.service   /etc/systemd/system/catalogue.service
 VALIDATE $? "copying repo"
 
 systemctl daemon-reload &>>LOGFILE
