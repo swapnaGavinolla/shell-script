@@ -20,9 +20,9 @@ then
    echo "ERROR: run wid root access"
    exit 1
 fi
-yum install git -y 
-VALIDATE $? "installing git" &>>LOGFILE
-yum install nginx -y
-VALIDATE $? "installing nginx" &>>LOGFILE
-yum install postfix -y   
-VALIDATE $? "installing postfix" &>>LOGFILE
+yum install git -y &>>LOGFILE
+VALIDATE $? "installing git" 
+yum install nginx -y &>>LOGFILE
+VALIDATE $? "installing nginx" 
+yum install postfix -y  &>>LOGFILE 
+VALIDATE $? "installing postfix" 
