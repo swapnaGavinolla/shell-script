@@ -19,10 +19,10 @@ echo "given names are $name1 and $name2"
 
 #4.get username n password --prompt d user to enter
 echo "enter ur username"
-read USERNAME
-echo "u entered d username as $USERNAME"
+read -s USERNAME
+#echo "u entered d username as $USERNAME"
 echo "enter ur password"
-read PASSWORD
-echo "u entered d username as $PASSWORD"
+read -s PASSWORD
+#echo "u entered d username as $PASSWORD"
 
 
